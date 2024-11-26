@@ -9,7 +9,7 @@ namespace DemoPosts.Application.Contracts
 {
     public interface IPostRepository : IAsyncRepository<Post>
     {
-        Task<List<Post>> GetAllPostsAsync(bool includeCategory);
+        Task<IReadOnlyList<Post>> GetAllPostsAsync(bool includeCategory);
         Task<Post> GetPostByIdAsync(Guid id, bool includeCategory);
     }
 }
